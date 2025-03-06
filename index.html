@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flixoh</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Flixoh</div>
+        <nav class="menu">
+            <ul>
+                <li class="menu-item" data-section="movies">Movies</li>
+                <li class="menu-item" data-section="favourites">Favourites</li>
+                <li class="menu-item" data-section="recommended">Recommended</li>
+            </ul>
+        </nav>
+        <div class="profile-toggle">
+            <img src="images/Profile.webp" alt="Profile" class="profile-img">
+            <div class="toggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="toggle-ball"></div>
+            </div>
+        </div>
+        <!-- Added Search Bar -->
+        <input type="text" id="searchBar" class="search-bar" placeholder="Search for movies...">
+    </header>
+
+    <main class="content">
+        <section id="movies" class="section">
+            <h1 class="section-title">Movies</h1>
+            <div class="movie-list" id="movieList">
+                <div class="movie-card">
+                    <img src="images/1.jpg" alt="Movie 1" class="movie-img">
+                    <h2 class="movie-title">Salaar: Part 1- Ceasefire</h2>
+                    <p class="movie-desc">The film follows the friendship between Deva, 
+                                the exiled prince of Khansaar, and Varadha.
+                    </p>
+                    <button class="watch-btn" data-video="videos/1.mkv">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/2.jpeg" alt="Movie 2" class="movie-img">
+                    <h2 class="movie-title">Java Tutorial</h2>
+                    <p class="movie-desc">It provides a comprehensive introduction to Java's fundamental principles</p>
+                    <button class="watch-btn" data-video="videos/2.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/3.jpg" alt="Movie 3" class="movie-img">
+                    <h2 class="movie-title">Deadpool & Wolverine</h2>
+                    <p class="movie-desc">As the vigilante Deadpool, Wade Wilson ambushes Ajax and a convoy of his men on an expressway.</p>
+                    <button class="watch-btn" data-video="videos/3.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/4.jpeg" alt="Movie 4" class="movie-img">
+                    <h2 class="movie-title">Kalki 2898 AD</h2>
+                    <p class="movie-desc">Set in 2898 AD, the film follows a group of people on a mission to save the unborn child of lab subject SUM-80.
+                    </p>
+                    <button class="watch-btn" data-video="videos/4.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/5.jpeg" alt="Movie 5" class="movie-img">
+                    <h2 class="movie-title">MongoDB Tutorial</h2>
+                    <p class="movie-desc">MongoDB tutorial provides basic and advanced concepts of SQL.</p>
+                    <button class="watch-btn" data-video="videos/5.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/6.jpg" alt="Movie 6" class="movie-img">
+                    <h2 class="movie-title">Venom: The Last Dance</h2>
+                    <p class="movie-desc">Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in.</p>
+                    <button class="watch-btn" data-video="videos/6.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/7.jpeg" alt="Movie 7" class="movie-img">
+                    <h2 class="movie-title">Python Tutorial</h2>
+                    <p class="movie-desc">The Python tutorial on the Python website provides an informal introduction to the language and its system.</p>
+                    <button class="watch-btn" data-video="videos/7.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/8.jpg" alt="Movie 8" class="movie-img">
+                    <h2 class="movie-title">Oppenheimer</h2>
+                    <p class="movie-desc"> It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.</p>
+                    <button class="watch-btn" data-video="videos/8.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="favourites" class="section hidden">
+            <h1 class="section-title">Favourites</h1>
+            <div id="favouritesList"></div>
+            <p class="empty-msg">No favourites added yet.</p>
+        </section>
+
+        <section id="recommended" class="section hidden">
+            <h1 class="section-title">Recommended</h1>
+            <div class="movie-list">
+                <div class="movie-card">
+                    <img src="images/9.jpg" alt="Movie 1" class="movie-img">
+                    <h2 class="movie-title">Mission Impossible- Dead Reckoning</h2>
+                    <p class="movie-desc">The Sevastopol, a next-generation Russian stealth submarine, activates an advanced AI using a two-piece cruciform key.</p>
+                    <button class="watch-btn" data-video="videos/9.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/10.jpg" alt="Movie 2" class="movie-img">
+                    <h2 class="movie-title">Pushpa 2</h2>
+                    <p class="movie-desc">Pushpa Raj is a rising smuggler who aims to become a kingmaker and face new challenges.</p>
+                    <button class="watch-btn" data-video="videos/10.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/11.jpg" alt="Movie 3" class="movie-img">
+                    <h2 class="movie-title">The Batman</h2>
+                    <p class="movie-desc">Bruce Wayne, also known as Batman, investigates the Riddler, a serial killer who targets Gotham's political leaders.</p>
+                    <button class="watch-btn" data-video="videos/11.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/12.jpg" alt="Movie 4" class="movie-img">
+                    <h2 class="movie-title">Avengers Endgame</h2>
+                    <p class="movie-desc">In the aftermath of Thanos's devastating use of the Infinity Stones in Avengers: Infinity War, the remaining Avengers must assemble.</p>
+                    <button class="watch-btn" data-video="videos/12.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/13.jpg" alt="Movie 5" class="movie-img">
+                    <h2 class="movie-title">Gladiator II</h2>
+                    <p class="movie-desc">The movie is set in Ancient Rome 16 years after the death of Maximus, the hero from the original Gladiator. The story follows Lucius (Paul Mescal)</p>
+                    <button class="watch-btn" data-video="videos/13.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/14.jpg" alt="Movie 6" class="movie-img">
+                    <h2 class="movie-title">Dune</h2>
+                    <p class="movie-desc">The film is about Paul Atreides, a gifted young man who must travel to the desert planet Arrakis to secure the future of his family and people.</p>
+                    <button class="watch-btn" data-video="videos/14.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+                <div class="movie-card">
+                    <img src="images/15.jpg" alt="Movie 7" class="movie-img">
+                    <h2 class="movie-title">Interstellar</h2>
+                    <p class="movie-desc">
+                        In the mid-21st century, humanity faces extinction due to dust storms and widespread crop blights. Joseph Cooper, a widowed former NASA test pilot, works as a farmer and raises his children.</p>
+                    <button class="watch-btn" data-video="videos/15.mp4">Watch</button>
+                    <button class="favourite-btn">Add to Favourites</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="video-modal hidden" id="videoModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <video id="modalVideo" controls></video>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
